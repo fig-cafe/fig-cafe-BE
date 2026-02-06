@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   db:
     image: postgres:16
@@ -15,9 +13,7 @@ services:
     restart: unless-stopped
 
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: seongjin9018/fig-cafe-be:latest
     container_name: fig-app
     environment:
       DB_HOST: db
